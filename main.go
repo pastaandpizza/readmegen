@@ -95,9 +95,9 @@ func main() {
 	}
 	defer out.Close()
 
-	tmpl.ExecuteTemplate(out, "header", nil)
+	tmpl.ExecuteTemplate(out, constants.TemplateHeader, nil)
 	for _, category := range categories {
-		tmpl.ExecuteTemplate(out, "category", category)
+		tmpl.ExecuteTemplate(out, constants.TemplateCategory, category)
 	}
-	tmpl.ExecuteTemplate(out, "footer", nil)
+	tmpl.ExecuteTemplate(out, constants.TemplateFooter, nil)
 }

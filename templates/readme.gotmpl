@@ -1,0 +1,20 @@
+{{ define "header" -}}
+# Recipes
+
+## Szablon przepisu
+
+[Szablon](pl-template.md)
+
+{{ end }}
+{{ define "category" -}}
+# {{ .Name }}
+
+{{ range .Items -}}
+- [{{ .Title }}]({{ .Filename }})
+{{ end }}
+{{ end }}
+{{ define "footer" -}}
+---
+
+Wygenerowano `{{ now }}`
+{{ end }}
